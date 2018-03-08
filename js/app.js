@@ -1,7 +1,7 @@
 $(document).ready(() => {
   
+//  var flickerAPI = "https://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
  var flickerAPI = "https://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
-
 
  $('form').submit((evt) => {
     var $submitButton = $('#submit');
@@ -16,6 +16,7 @@ $(document).ready(() => {
         format: "json"
       },
     (data) => {
+      console.log(data)
       var photoHTML = '';
       if (data.items.length > 0) {
         $.each(data.items, (i,photo) => {
