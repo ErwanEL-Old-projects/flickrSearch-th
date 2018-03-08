@@ -15,7 +15,6 @@ $(document).ready(() => {
         format: "json"
       },
     (data) => {
-      console.log(data)
       var photoHTML = '';
       if (data.items.length > 0) {
         $.each(data.items, (i,photo) => {
